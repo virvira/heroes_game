@@ -40,14 +40,6 @@ class BaseUnit(ABC):
         return f"{self.name} экипирован броней {self.armor.name}"
 
     def _count_damage(self, target: BaseUnit) -> int:
-        # TODO Эта функция должна содержать:
-        #  логику расчета урона игрока
-        #  логику расчета брони цели
-        #  здесь же происходит уменьшение выносливости атакующего при ударе
-        #  и уменьшение выносливости защищающегося при использовании брони
-        #  если у защищающегося нехватает выносливости - его броня игнорируется
-        #  после всех расчетов цель получает урон - target.get_damage(damage)
-        #  и возвращаем предполагаемый урон для последующего вывода пользователю в текстовом виде
         self.stamina -= self.weapon.stamina_per_hit
         damage = self.weapon.damage * self.unit_class.attack
 
@@ -60,7 +52,10 @@ class BaseUnit(ABC):
         return damage
 
     def get_damage(self, damage: int) -> Optional[int]:
-        self.hp -= damage
+        if self.hp - damage > 0:
+            self.hp -= damage
+        else:
+            self.hp = 0
 
     @abstractmethod
     def hit(self, target: BaseUnit) -> str:

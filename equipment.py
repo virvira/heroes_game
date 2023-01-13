@@ -58,7 +58,7 @@ class Equipment:
 
     def get_armors_names(self) -> list:
         return [
-            armor.name for armor in self.equipment.weapons
+            armor.name for armor in self.equipment.armors
         ]
 
     @staticmethod
