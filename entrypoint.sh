@@ -1,0 +1,4 @@
+export FLASK_APP=app.py
+flask run -h 0.0.0.0 -p 25000
+#ls -l
+#pwd
