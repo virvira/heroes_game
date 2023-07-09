@@ -1,3 +1,15 @@
-# Игра с веб-интерфейсом о битве героев в стиле олдскульных браузерных игр
+# Игра с веб-интерфейсом о битве героев в стиле браузерных игр
 
-https://skyengpublic.notion.site/5-a322e6b0b9df49bf8fbcb822cc2f90fe 
+Стек технологий: python 3.8, Flask 2.0.2
+
+<h3>Запуск проекта</h3>
+
+1. Создать виртуальное окружение
+`python3 -m venv venv`
+2. Активировать виртуальное окружение
+- `venv/Scripts/activate (Windows)`
+- `source venv/bin/activate (MacOS)`
+2. Установить зависимости
+`pip install -r requirements.txt`
+3. Поднять контейнеры:
+`docker-compose up -d`
