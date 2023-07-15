@@ -9,6 +9,6 @@
 2. Активировать виртуальное окружение
 - `venv/Scripts/activate (Windows)`
 - `source venv/bin/activate (MacOS)`
-2. Установить зависимости
+3. Установить зависимости
 `pip install -r requirements.txt`
-3. Запустить файл app.py
+4. Запустить файл app.py
