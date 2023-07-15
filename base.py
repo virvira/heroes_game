@@ -29,10 +29,10 @@ class Arena(metaclass=BaseSingleton):
 
         if self.player.hp <= 0:
             if self.enemy.hp <= 0:
-                self.battle_result = "Ничья"
-            self.battle_result = "Игрок проиграл битву"
+                self.battle_result = 'Ничья'
+            self.battle_result = 'Игрок проиграл битву'
         else:
-            self.battle_result = "Игрок выиграл битву"
+            self.battle_result = 'Игрок выиграл битву'
 
         return self._end_game()
 
@@ -61,9 +61,9 @@ class Arena(metaclass=BaseSingleton):
     def player_hit(self):
         result = self.player.hit(self.enemy)
         turn_result = self.next_turn()
-        return f"{result}\n{turn_result}"
+        return f'{result}\n{turn_result}'
 
     def player_use_skill(self):
         result = self.player.use_skill(self.enemy)
         turn_result = self.next_turn()
-        return f"{result}\n{turn_result}"
+        return f'{result}\n{turn_result}'

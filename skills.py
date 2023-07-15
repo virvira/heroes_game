@@ -45,11 +45,11 @@ class Skill(ABC):
         self.target = target
         if self._is_stamina_enough:
             return self.skill_effect()
-        return f"{self.user.name} попытался использовать {self.name} но у него не хватило выносливости."
+        return f'{self.user.name} попытался использовать {self.name} но у него не хватило выносливости.'
 
 
 class FuryPunch(Skill):
-    name = "Свирепый пинок"
+    name = 'Свирепый пинок'
     stamina = 6
     damage = 12
 
@@ -57,11 +57,11 @@ class FuryPunch(Skill):
         self.user.stamina -= self.stamina
         self.target.hp -= self.damage
 
-        return f"{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику."
+        return f'{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику.'
 
 
 class HardShot(Skill):
-    name = "Мощный укол"
+    name = 'Мощный укол'
     stamina = 5
     damage = 15
 
@@ -69,5 +69,5 @@ class HardShot(Skill):
         self.user.stamina -= self.stamina
         self.target.hp -= self.damage
 
-        return f"{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику."
+        return f'{self.user.name} использует {self.name} и наносит {self.damage} урона сопернику.'
 # объединить FuryPunch и HardShot в один класс

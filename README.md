@@ -11,5 +11,4 @@
 - `source venv/bin/activate (MacOS)`
 2. Установить зависимости
 `pip install -r requirements.txt`
-3. Поднять контейнеры:
-`docker-compose up -d`
+3. Запустить файл app.py
